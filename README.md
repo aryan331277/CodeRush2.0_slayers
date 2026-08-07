@@ -1,4 +1,4 @@
-# Intelibot Scribe : Autonomous AI Research Agent 🎓
+#Intelibot Scribe : Autonomous AI Research Agent 🎓
 
 **Intelibot Scribe** is a state-of-the-art governed, 16-stage autonomous AI research agent. It drives the complete scientific lifecycle—from initial hypothesis formulation and firewalled literature retrieval to sandboxed model training, iterative hyperparameter retuning, publication-grade LaTeX paper drafting, and live plagiarism verification.
 
