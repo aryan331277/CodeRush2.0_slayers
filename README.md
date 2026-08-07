@@ -31,36 +31,7 @@ The defining feature is **governed self-evolution**: the agent may propose bette
 
 ## Workflow Diagram
 
-```mermaid
-flowchart TD
-    A["Prompt Input\n(vague / detailed mode)"] --> B["Extensive Research Phase\nKeyword + Dense Retrieval"]
-    B --> B1["Untrusted Content Firewall\n+ Provenance Tagging"]
-    B1 --> C["Idea Surfacing\nContradictions + Implementable Ideas"]
-    C --> C1["Injection Test Log"]
-    C1 --> D{"Human-in-the-Loop\nIdea Selection"}
-    D --> E["Idea Formulation\n+ Concept Lineage"]
-    E --> F["Pseudocode Generation"]
-    F --> G{"Human Review\nPseudocode"}
-    G --> H["Real Code Generation"]
-    H --> I{"Human Review\nReal Code"}
-    I --> J["Autonomous Code Execution"]
-    J --> J1["Sandboxed Execution\n+ Audit Log"]
-    J1 --> K{"Result Check"}
-    K -- "Good" --> L["Paper Generation\nLaTeX + Citations"]
-    K -- "Bad" --> M["Rerun Loop\n Versioned Strategy Tracking"]
-    M --> N{"Needs Architecture\nChange?"}
-    N -- "No" --> J
-    N -- "Yes" --> O{"Architecture Change\nGate"}
-    O -- "Approved" --> P["New Architecture Version"]
-    P --> Q{"Better than\nlast version?"}
-    Q -- "No" --> R["Auto Rollback + Log"]
-    R --> J
-    Q -- "Yes" --> J
-    L --> S["Long-Term Strategic Memory\n Memory Expiry Rule"]
-    L --> T["Non-Programming Research Branch\nTheorems / Analysis / Lab-Work Flagging"]
-```
 
----
 
 ## Security & Safety Features
 
