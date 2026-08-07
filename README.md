@@ -1,7 +1,7 @@
 
 ## Project Information
 
-- **Team Name:** Slayers
+- **Team Name:** slayers
 - **Project Title:** Self-Evolving Autonomous Research Agent
 - **Track/Theme:** Agentic Ecosystem
 
@@ -74,7 +74,3 @@ flowchart TD
 
 ---
 
-## Team
-
-- **Team Name:** Slayers
-- **Track:** Agentic Ecosystem
