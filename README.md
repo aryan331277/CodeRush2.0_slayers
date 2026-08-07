@@ -1,47 +1,99 @@
+# Intelibot Scribe — Autonomous AI Research Agent 🎓🤖
 
-## Project Information
-
-- **Team Name:** slayers
-- **Project Title:** Self-Evolving Autonomous Research Agent
-- **Track/Theme:** Agentic Ecosystem
+**Intelibot Scribe** is a state-of-the-art governed, 16-stage autonomous AI research agent. It drives the complete scientific lifecycle—from initial hypothesis formulation and firewalled literature retrieval to sandboxed model training, iterative hyperparameter retuning, publication-grade LaTeX paper drafting, and live plagiarism verification.
 
 ---
 
-## Project Description
+## 🌟 Key Features
 
-A secure research and computer-use agent that turns an open-ended question into a reproducible, evidence-backed research package — combining live retrieval, document analysis, sandboxed code execution, and controlled self-improvement, without ever letting the agent silently rewrite its own trusted control layer.
-
-The agent researches a topic across papers and live sources, surfaces implementable ideas and contradictions in the literature, drafts and formulates a concept with the user in the loop, generates pseudocode and real code under human approval gates, executes it in an isolated sandbox, and — on success — auto-generates a fully cited LaTeX research paper. Every strategy change the agent proposes for itself is versioned, tested against held-out tasks, and reversible.
-
-The defining feature is **governed self-evolution**: the agent may propose better prompts, retrieval strategies, or execution configs, but nothing becomes trusted behavior without evaluation, logging, and a rollback path.
-
----
-
-## Technical Stack
-
-- **Frontend:** React, Monaco Editor / syntax-highlighted live code viewer, WebSocket-driven trace/event stream panel
-- **Backend:** Python (FastAPI)
-- **LLM Providers:** Groq (Llama 3.3 70B / GPT-OSS 120B) as primary, Gemini as automatic failover
-- **Code Execution Sandbox:** E2B (Firecracker microVM isolation, disposable sessions, network allowlisting)
-- **Document Generation:** LaTeX (Tectonic / pdflatex, compiled inside the sandbox)
-- **Retrieval:** Hybrid keyword + dense (embedding) retrieval across papers and live web sources
-- **Storage:** Evidence graph + versioned strategy store + long-term project memory with expiry rules
+- **🛡️ Firewalled Literature Retrieval**: Queries Crossref & open academic APIs without untrusted instruction injection.
+- **⚡ E2B Sandboxed Execution**: Runs machine learning code in isolated container environments with PyTorch CPU-only support (~200MB lightweight wheels).
+- **📊 2-Step Data-Driven Model Selection**: Automatically queries Kaggle's search engine for the hottest relevant dataset, cleans & normalizes features via a 10-step preprocessor, and selects optimal ML models (`RandomForest`, `GradientBoosting`, `PyTorch`, `MLP`) based on dataset characteristics.
+- **📄 PDF Writing Style Learning**: Upload 1–2 research PDFs to extract representative style samples; the writing agent mirrors your cadence, vocabulary, and paper tone.
+- **🔍 GoWinston AI Plagiarism Verification**: Scans drafted LaTeX papers against 400B+ web and journal sources, rendering an interactive SVG originality gauge and source link breakdown.
+- **📝 Publication-Grade LaTeX Engine**: Generates comprehensive 6-page research papers complete with mathematical formalizations, equations (`\begin{equation}`), and formatted empirical benchmark tables (`\begin{table}`).
+- **🔄 Multi-Tier AI Model Fallback**: Features an automated 3-tier fallback matrix (`llama-3.3-70b-versatile` → `llama-3.1-8b-instant` → `gemini-2.5-flash`) ensuring 100% immunity to rate limits.
 
 ---
 
-## Workflow Diagram
+## 🏗️ Project Architecture
 
-
-
-## Security & Safety Features
-
-- Untrusted content firewall for all scraped/retrieved material (prompt-injection defense)
-- Provenance and timestamp tracking on every piece of evidence
-- Injection attempt logging (visible, not silently discarded)
-- Isolated, disposable sandbox execution with network allowlisting and audit logs
-- Human approval gates at every sensitive decision point (idea selection, pseudocode, code, architecture changes)
-- Versioned strategy tracking with automatic rollback on regression
-- Memory expiry to prevent unbounded context/data accumulation
+```
+intelibot-scribe/
+├── backend/
+│   ├── main.py          # FastAPI application server
+│   ├── sandbox.py       # E2B Sandbox interpreter & PyTorch installer
+│   ├── plagiarism.py    # GoWinston AI plagiarism client
+│   ├── database.py      # Local SQLite & state management
+│   ├── supervisor.py    # Multi-step audit & evaluation supervisor
+│   └── llm_engine.py    # Multi-tier Groq & Gemini LLM engine
+├── src/
+│   ├── routes/          # TanStack Router page components & stages
+│   ├── lib/             # Pipeline server functions & AI orchestration
+│   └── components/      # UI primitives & design system
+├── public/              # Static assets & favicon
+└── package.json
+```
 
 ---
 
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ & npm / bun
+- Python 3.10+
+- E2B API Key ([e2b.dev](https://e2b.dev))
+- Groq API Key ([groq.com](https://groq.com))
+- GoWinston AI API Key ([gowinston.ai](https://gowinston.ai))
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/atharv1909/intelibot-scribe.git
+   cd intelibot-scribe
+   ```
+
+2. **Frontend Setup**:
+   ```bash
+   npm install
+   ```
+
+3. **Backend Setup**:
+   ```bash
+   cd backend
+   python -m venv venv
+   .\venv\Scripts\Activate.ps1   # On Windows
+   pip install -r requirements.txt
+   ```
+
+4. **Environment Variables**:
+   Copy `.env.example` to `.env` and fill in your API credentials:
+   ```env
+   GROQ_API_KEY=gsk_...
+   E2B_API_KEY=e2b_...
+   GOWINSTON_API_KEY=...
+   SUPABASE_URL=...
+   SUPABASE_PUBLISHABLE_KEY=...
+   ```
+
+### Running Locally
+
+- **Start Backend**:
+  ```bash
+  cd backend
+  uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+  ```
+
+- **Start Frontend**:
+  ```bash
+  npm run dev
+  ```
+  Open **[http://localhost:8080](http://localhost:8080)** in your browser!
+
+---
+
+## 📜 License
+
+Licensed under the MIT License.
