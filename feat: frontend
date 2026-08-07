@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260807-05-4dc3575","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/7949ff62d67710d5.telemetry_sdk.js" integrity="sha512-KIvXA82Di44YY/RH9/63A9MuTuavYgDFG8PfErJn7Wli4K0LAOk+coo/aPXk3+ZNL96nHh9VYD4PE+fLes+laQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anveshak AI</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .toggle-btn { transition: all 0.2s ease; }
+        .toggle-btn.active { background: #1a1a1a; color: #fff; }
+    </style>
+  <script src="/_sdk/0e8d3a91e1c6f495.data_sdk.js" type="text/javascript" integrity="sha512-c00oDoGjsMgluCLLEyVl3suwEkgjOGGplVFbsilUoBg4aMKNmsL3mwsc9r0dPn95qiSZyjBousQXgROkAW7p/w=="></script>
+  <script src="/_sdk/04cc6185e046f597.resizing_sdk.js" type="text/javascript" integrity="sha512-CiE/G92aQF0nxneFg1kdOvXih8sQ1Z2a2QI3+r/WvzJwQqH6+IyB3iL07OkJmpm3ABAaf07+FnqWny98f5sR6w=="></script>
+ </head>
+ <body data-template-id="__page-root" class="min-h-screen w-full">
+  <header class="w-full border-b border-gray-200">
+   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-8"><span data-template-id="nav-logo" class="canva-text font-bold text-lg"></span>
+     <div class="hidden md:flex items-center gap-6"><a data-template-id="nav-dashboard" class="canva-link text-sm cursor-pointer hover:opacity-70"></a> <a data-template-id="nav-research" class="canva-link text-sm cursor-pointer hover:opacity-70"></a> <a data-template-id="nav-history" class="canva-link text-sm cursor-pointer hover:opacity-70"></a> <a data-template-id="nav-settings" class="canva-link text-sm cursor-pointer hover:opacity-70"></a>
+     </div>
+    </div>
+    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"><i data-lucide="user" style="width:16px;height:16px;color:#666"></i>
+    </div>
+   </nav>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 py-16">
+   <div class="flex flex-col lg:flex-row gap-12 items-start">
+    <div class="flex-1 max-w-2xl">
+     <h1 data-template-id="main-heading" class="canva-text font-bold mb-3"></h1>
+     <p data-template-id="main-subtitle" class="canva-text mb-8"></p>
+     <div class="flex gap-3 mb-6"><button id="btn-quick" class="toggle-btn active px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium" onclick="setMode('quick')"> ⚡ Quick Research </button> <button id="btn-deep" class="toggle-btn px-5 py-2.5 rounded-full border border-gray-200 text-sm font-medium" onclick="setMode('deep')"> 📚 Deep Research </button>
+     </div>
+     <div class="relative mb-5"><input data-template-id="search-input" type="text" class="canva-input w-full px-5 py-4 rounded-2xl border border-gray-200 text-base focus:outline-none focus:border-gray-400 bg-white">
+     </div><button data-template-id="start-button" class="canva-button px-8 py-3.5 rounded-xl font-medium text-base"></button>
+    </div>
+    <aside data-template-id="pipeline-card" class="canva-card w-full lg:w-80 border border-gray-200 rounded-2xl p-6">
+     <h3 data-template-id="pipeline-title" class="canva-text font-semibold mb-5"></h3>
+     <ul class="space-y-4">
+      <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs">✓</span> <span data-template-id="step-1" class="canva-text text-sm"></span></li>
+      <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs">✓</span> <span data-template-id="step-2" class="canva-text text-sm"></span></li>
+      <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full border border-gray-300 flex items-center justify-center text-xs text-gray-300">○</span> <span data-template-id="step-3" class="canva-text text-sm"></span></li>
+      <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full border border-gray-300 flex items-center justify-center text-xs text-gray-300">○</span> <span data-template-id="step-4" class="canva-text text-sm"></span></li>
+      <li class="flex items-center gap-3"><span class="w-5 h-5 rounded-full border border-gray-300 flex items-center justify-center text-xs text-gray-300">○</span> <span data-template-id="step-5" class="canva-text text-sm"></span></li>
+     </ul>
+    </aside>
+   </div>
+  </main>
+  <script src="/_sdk/571d88ca352bbccf.editing_sdk.js" integrity="sha512-jpVzCgOJfgU8ETK2cVi9ukdjrZIqXjCspYqy9afx1TyeJ4jZxisBmh2SIlonXgbaxCv9M5yrk3WY4wZKWDC3Ig=="></script>
+  <script>
+        lucide.createIcons();
+
+        function setMode(mode) {
+            document.getElementById('btn-quick').classList.toggle('active', mode === 'quick');
+            document.getElementById('btn-deep').classList.toggle('active', mode === 'deep');
+        }
+    </script>
+ </body>
+</html>
